@@ -90,7 +90,7 @@ def viz_dual_line(df, timestamp, col1, col2):
     # Add a legend
     fig.legend()
 
-    plt.savefig(f'viz/{col1}_vs_{col2}.png')
+    plt.savefig(f'viz/{file}_{col1}_vs_{col2}.png')
 
 
 # main
