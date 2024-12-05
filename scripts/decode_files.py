@@ -75,16 +75,16 @@ def viz_dual_line(df, timestamp, col1, col2):
     fig, ax1 = plt.subplots()
 
     # Plot the first line on the left axis
-    ax1.plot(df[timestamp], df_activity[col1], color='blue', label='power')
-    ax1.set_ylabel(col1, color='blue')
+    ax1.plot(df[timestamp], df[col1], color='blue', label=f'{col1}')
+    ax1.set_ylabel(col1, color='blue', fontsize = 7)
     ax1.tick_params(axis='y', labelcolor='blue')
 
     # Create the second axis that shares the x-axis
     ax2 = ax1.twinx()
 
     # Plot the second line on the right axis
-    ax2.plot(df_activity[timestamp], df_activity[col2], color='red', label=f'{col2}')
-    ax2.set_ylabel(col2, color='red')
+    ax2.plot(df[timestamp], df[col2], color='red', label=f'{col2}')
+    ax2.set_ylabel(col2, color='red', fontsize = 7)
     ax2.tick_params(axis='y', labelcolor='red')
 
     # Add a legend
